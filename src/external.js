@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+import fetch from "node-fetch";
 
 async function fetchGenderize(name) {
   const res = await fetch(
@@ -66,4 +66,4 @@ function classifyAge(age) {
   return "senior";
 }
 
-module.exports = { fetchGenderize, fetchAgify, fetchNationalize, classifyAge };
+export { fetchGenderize, fetchAgify, fetchNationalize, classifyAge };

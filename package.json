@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "REST API that enriches names using Genderize, Agify, and Nationalize APIs",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "dev": "node index.js"

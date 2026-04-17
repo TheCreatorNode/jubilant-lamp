@@ -1,6 +1,10 @@
-const initSqlJs = require("sql.js");
-const path = require("path");
-const fs = require("fs");
+import initSqlJs from "sql.js";
+import path from "path";
+import fs from "fs";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const DB_PATH = path.join(__dirname, "..", "profiles.db");
 
@@ -46,4 +50,4 @@ function save() {
   if (_db) persist(_db);
 }
 
-module.exports = { getDb, save };
+export { getDb, save };

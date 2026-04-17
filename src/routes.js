@@ -1,11 +1,11 @@
-const { v7: uuidv7 } = require("uuid");
-const { getDb, save } = require("./db");
-const {
+import { v7 as uuidv7 } from "uuid";
+import { getDb, save } from "./db.js";
+import {
   fetchGenderize,
   fetchAgify,
   fetchNationalize,
   classifyAge,
-} = require("./external");
+} from "./external.js";
 
 async function createProfile(req, res) {
   const { name } = req.body;
@@ -186,4 +186,4 @@ function formatProfile(row) {
   };
 }
 
-module.exports = { createProfile, getProfile, listProfiles, deleteProfile };
+export { createProfile, getProfile, listProfiles, deleteProfile };

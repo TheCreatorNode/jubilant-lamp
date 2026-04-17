@@ -1,10 +1,10 @@
-const express = require("express");
-const {
+import express from "express";
+import {
   createProfile,
   getProfile,
   listProfiles,
   deleteProfile,
-} = require("./src/routes");
+} from "./src/routes.js";
 
 const app = express();
 
@@ -37,4 +37,4 @@ app.listen(PORT, () => {
   console.log(`Profile API running on port ${PORT}`);
 });
 
-module.exports = app;
+export default app;
