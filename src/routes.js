@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from "uuid";
+import { v7 as uuidv7 } from "uuid";
 import { getDb, save } from "./db.js";
 import {
   fetchGenderize,
